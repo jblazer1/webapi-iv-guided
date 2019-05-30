@@ -1,3 +1,8 @@
+const envReader = require("dotenv");
+envReader.config(); // reads .env and merges it into process.env
+// can condense the two lines above into one line as below
+// require('dotenv').config();
+
 const server = require("./api/server.js");
 const port = process.env.PORT || 4000;
 
